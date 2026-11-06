@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Student Blog</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <script type="module" src="js/theme.js?v=2" defer></script>
+    <script type="module" src="js/auth.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navigation container"><a class="logo" href="index.html">Student Blog</a>
+            <div class="nav-actions">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+                <a class="nav-link" href="author.html">Author</a>
+                <a class="nav-link" href="add-blog.html">Write</a>
+                <a class="nav-link active" href="login.html">Login</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <div class="theme-picker">
+                    <button id="theme-toggle" class="theme-button" type="button" aria-label="Choose colour theme"
+                        title="Choose colour theme" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="theme-options">
+                        <span class="theme-wheel" aria-hidden="true"></span>
+                    </button>
+                    <div id="theme-options" class="theme-options" role="group" aria-label="Colour themes" hidden>
+                        <p class="theme-options-label">Colour theme</p>
+                        <button class="theme-choice" type="button" data-theme-choice="paper" aria-label="Paper theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-paper"
+                                aria-hidden="true"></span>Paper</button>
+                        <button class="theme-choice" type="button" data-theme-choice="grove" aria-label="Grove theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-grove"
+                                aria-hidden="true"></span>Grove</button>
+                        <button class="theme-choice" type="button" data-theme-choice="tide" aria-label="Tide theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-tide"
+                                aria-hidden="true"></span>Tide</button>
+                        <button class="theme-choice" type="button" data-theme-choice="night" aria-label="Night theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-night"
+                                aria-hidden="true"></span>Night</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="form-page container">
+        <section class="form-panel">
+            <p class="eyebrow">Your writing space</p>
+            <h1>Join Student Blog</h1>
+            <p id="form-message" class="message" role="alert"></p>
+            <form id="auth-form" novalidate>
+                <div id="name-group" class="form-group"><label for="name">Name</label><input id="name" name="name"
+                        type="text"><small class="error" data-error="name"></small></div>
+                <div class="form-group"><label for="email">Email</label><input id="email" name="email"
+                        type="email"><small class="error" data-error="email"></small></div>
+                <div class="form-group"><label for="password">Password</label><input id="password" name="password"
+                        type="password"><small class="error" data-error="password"></small></div>
+                <div id="confirm-group" class="form-group"><label for="confirm-password">Confirm password</label><input
+                        id="confirm-password" name="confirmPassword" type="password"><small class="error"
+                        data-error="confirmPassword"></small></div>
+                <button id="submit-button" class="primary-button" type="submit">Create account</button>
+            </form>
+            <p class="switch-text"><span id="mode-text">Already have an account?</span> <button id="mode-toggle"
+                    class="text-button" type="button">Login</button></p>
+        </section>
+    </main>
+</body>
+
+</html>

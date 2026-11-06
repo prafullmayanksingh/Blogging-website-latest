@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAFULL MAYANK SINGH | Author & Innovator | Student Blog</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <script type="module" src="js/theme.js?v=3" defer></script>
+    <script type="module" src="js/author.js?v=3" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navigation container" aria-label="Main navigation">
+            <a class="logo" href="index.html">Student Blog</a>
+            <div class="nav-actions">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="blogs.html">Blogs</a>
+                <a class="nav-link active" href="author.html">Author</a>
+                <a class="nav-link" href="add-blog.html">Write</a>
+                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <div class="theme-picker">
+                    <button id="theme-toggle" class="theme-button" type="button" aria-label="Choose colour theme"
+                        title="Choose colour theme" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="theme-options">
+                        <span class="theme-wheel" aria-hidden="true"></span>
+                    </button>
+                    <div id="theme-options" class="theme-options" role="group" aria-label="Colour themes" hidden>
+                        <p class="theme-options-label">Colour theme</p>
+                        <button class="theme-choice" type="button" data-theme-choice="paper" aria-label="Paper theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-paper"
+                                aria-hidden="true"></span>Paper</button>
+                        <button class="theme-choice" type="button" data-theme-choice="grove" aria-label="Grove theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-grove"
+                                aria-hidden="true"></span>Grove</button>
+                        <button class="theme-choice" type="button" data-theme-choice="tide" aria-label="Tide theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-tide"
+                                aria-hidden="true"></span>Tide</button>
+                        <button class="theme-choice" type="button" data-theme-choice="night" aria-label="Night theme"
+                            aria-pressed="false"><span class="theme-swatch swatch-night"
+                                aria-hidden="true"></span>Night</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container author-page">
+        <!-- Author Profile Header -->
+        <section class="author-hero-card">
+            <div class="author-hero-main">
+                <div class="author-avatar-wrap">
+                    <img class="author-avatar" src="images/author-prafull.jpg" alt="PRAFULL MAYANK SINGH" />
+                    <span class="status-indicator" title="Active Author"></span>
+                </div>
+                <div class="author-hero-info">
+                    <div class="author-tags-row">
+                        <span class="author-badge">✨ Featured Lead Author</span>
+                        <span class="author-badge-sub">Full-Stack &amp; Technical Writer</span>
+                    </div>
+                    <h1 class="author-name-title">PRAFULL MAYANK SINGH</h1>
+                    <p class="author-bio">
+                        Passionate software developer, system designer, and student writer. Exploring the intersection of modern web architecture, elegant coding practices, mindful thinking, and everyday creative writing.
+                    </p>
+                    
+                    <div class="author-topic-chips">
+                        <span class="topic-chip">💻 Software Architecture</span>
+                        <span class="topic-chip">💡 Creative Thinking</span>
+                        <span class="topic-chip">📚 Mindful Learning</span>
+                        <span class="topic-chip">🌍 Travel &amp; Perspectives</span>
+                        <span class="topic-chip">🚀 Web Technologies</span>
+                    </div>
+
+                    <div class="author-actions">
+                        <a class="primary-button" href="add-blog.html">✍️ Write With Prafull</a>
+                        <a class="secondary-button" href="#author-works">📖 Explore Articles</a>
+                        <a class="secondary-button" href="blogs.html">All Blogs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Author Metrics -->
+            <div class="author-stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">45+</span>
+                    <span class="stat-label">Published Articles</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">12.5k</span>
+                    <span class="stat-label">Monthly Readers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Topic Areas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9 ★</span>
+                    <span class="stat-label">Reader Rating</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic 3 Random Posts Section -->
+        <section class="author-posts-section" aria-labelledby="author-posts-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">🎲 Curated Rotation</p>
+                    <h2 id="author-posts-title">3 Random Posts Picked For You</h2>
+                    <p id="author-message" class="message" role="status">3 fresh random posts selected for this visit</p>
+                </div>
+                <div class="author-shuffle-control">
+                    <button id="author-shuffle-btn" class="secondary-button shuffle-button" type="button" title="Shuffle another 3 random posts">
+                        <span class="shuffle-icon" aria-hidden="true">🔄</span> Shuffle 3 New Posts
+                    </button>
+                </div>
+            </div>
+            <div id="author-posts-grid" class="posts-grid" aria-live="polite">
+                <!-- 3 random posts loaded on every visit/refresh -->
+            </div>
+        </section>
+
+        <!-- Articles Written By Prafull Mayank Singh -->
+        <section class="author-works-section" id="author-works">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Signature Works</p>
+                    <h2>Articles Authored by PRAFULL MAYANK SINGH</h2>
+                </div>
+            </div>
+            <div id="prafull-articles-grid" class="posts-grid">
+                <!-- Injected via author.js -->
+            </div>
+        </section>
+
+        <!-- Author Quote Block -->
+        <section class="author-quote-card">
+            <blockquote>
+                &ldquo;Writing code builds the machines, but writing words shapes how we think and connect. Great software and great ideas both begin with clarity, empathy, and simplicity.&rdquo;
+            </blockquote>
+            <cite>&mdash; PRAFULL MAYANK SINGH</cite>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Student Blog &copy; 2026 &bull; Dedicated Author Page for <strong>PRAFULL MAYANK SINGH</strong></p>
+    </footer>
+</body>
+
+</html>
